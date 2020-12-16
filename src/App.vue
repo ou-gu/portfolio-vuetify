@@ -38,7 +38,9 @@
       <v-toolbar-title>Vuetify</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text>For Enterprise</v-btn>
+        <v-btn text to="/about">
+          About me
+        </v-btn>
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
@@ -57,6 +59,9 @@
         </v-menu>
       </v-toolbar-items>
     </v-app-bar>
+    <v-main>
+      <router-view />
+    </v-main>
     <v-footer color="primary" dark app> Vuetiry </v-footer>
   </v-app>
 </template>
@@ -100,9 +105,9 @@ export default {
         {
           name: "Preminum themes",
           icon: "mdi-vuetify",
-        },
-      ],
+        }
+      ]
     };
-  },
+  }
 };
 </script>
