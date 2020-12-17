@@ -35,18 +35,19 @@
 
     <v-app-bar color="primary" dark app clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Vuetify</v-toolbar-title>
+      <v-toolbar-items>
+        <v-btn text to="/">Home<v-icon>mdi-home</v-icon></v-btn>
+      </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text to="/about">
-          About me
-        </v-btn>
+        <v-btn text to="/about">About me</v-btn>
+        <v-btn text to="/work">Work</v-btn>
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
-            <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
+            <v-btn v-on="on" text>Contact<v-icon>mdi-menu-down</v-icon></v-btn>
           </template>
           <v-list>
-            <v-subheader>Get help</v-subheader>
+            <v-subheader>SNS</v-subheader>
             <v-list-item v-for="support in supports" :key="support.name">
               <v-list-item-icon>
                 <v-icon>{{ support.icon }}</v-icon>
@@ -74,9 +75,9 @@ export default {
       supports: [
         { name: "Consulting and suppourt", icon: "mdi-vuetify" },
         { name: "Discord community", icon: "mdi-discord" },
-        { name: "Report a bug", icon: "mdi-bug" },
         { name: "Github issu board", icon: "mdi-github" },
         { name: "Stack overview", icon: "mdi-stack-overflow" },
+        { name: "Contact form", icon: "mdi-email-outline" },
       ],
       nav_lists: [
         {
@@ -105,9 +106,9 @@ export default {
         {
           name: "Preminum themes",
           icon: "mdi-vuetify",
-        }
-      ]
+        },
+      ],
     };
-  }
+  },
 };
 </script>
