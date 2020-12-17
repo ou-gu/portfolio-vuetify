@@ -63,7 +63,18 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-footer color="primary" dark app> Vuetiry </v-footer>
+    <v-footer color="primary" dark app height="100px">
+      <v-row justify="center">
+        <v-btn v-for="icon in icons" :key="icon" class="mx-5" dark icon>
+          <v-icon size="30px">
+            {{ icon }}
+          </v-icon>
+        </v-btn>
+        <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
+          {{ new Date().getFullYear() }} — <strong>Wang.yu</strong>
+        </v-col>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
@@ -73,41 +84,38 @@ export default {
     return {
       drawer: null,
       supports: [
-        { name: "Consulting and suppourt", icon: "mdi-vuetify" },
-        { name: "Discord community", icon: "mdi-discord" },
-        { name: "Github issu board", icon: "mdi-github" },
-        { name: "Stack overview", icon: "mdi-stack-overflow" },
+        { name: "Discord", icon: "mdi-discord" },
+        { name: "Github", icon: "mdi-github" },
+        { name: "Stack overflow", icon: "mdi-stack-overflow" },
+        { name: "Twitter", icon: "mdi-twitter" },
         { name: "Contact form", icon: "mdi-email-outline" },
       ],
       nav_lists: [
         {
-          name: "Getting Started",
-          icon: "mdi-speedometer",
-          lists: ["Quick Start", "Pre-made layouts"],
+          name: "Home",
+          icon: "mdi-home",
         },
         {
-          name: "Customization",
-          icon: "mdi-cogs",
+          name: "About me",
+          icon: "mdi-baby-face",
         },
         {
-          name: "Styles & animations",
-          icon: "mdi-palette",
-          lists: ["Colors", "Content", "Display"],
+          name: "Wrok",
+          icon: "mdi-wrench",
         },
         {
-          name: "UI Components",
-          icon: "mdi-view-dashboard",
-          lists: ["API explorer", "Alerts"],
-        },
-        {
-          name: "Directives",
-          icon: "mdi-function",
-        },
-        {
-          name: "Preminum themes",
-          icon: "mdi-vuetify",
+          name: "Contact",
+          icon: "mdi-qrcode",
+          lists: [
+            "Discord",
+            "Github",
+            "Stack overflow",
+            "Twitter",
+            "Contact form",
+          ],
         },
       ],
+      icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
     };
   },
 };
