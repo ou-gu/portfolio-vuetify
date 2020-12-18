@@ -55,7 +55,7 @@
                   slot-scope="{ hover }"
                   class="text-xs-center ma-4"
                   :class="`elevation-${hover ? 12 : 4}`"
-                  color="teal darken-2"
+                  color="blue darken-2"
                 >
                   <v-card-title>
                     <div class="mx-auto">
@@ -63,8 +63,8 @@
                         :value="skill.value"
                         :color="skill.color"
                         :rotate="-90"
-                        width="15"
-                        size="100"
+                        width="40"
+                        size="200"
                       >
                         {{ skill.value }}
                       </v-progress-circular>
@@ -80,7 +80,7 @@
                             :class="`${skill.color}--text`"
                             class="subtitle-1"
                           >
-                            <v-icon size="22" color="white">
+                            <v-icon size="25" color="white">
                               {{ skill.icon }}
                             </v-icon>
                             {{ skill.title }}
@@ -107,11 +107,11 @@ export default {
         {
           title: "Portfolio Page",
           skill: "Vue.js",
-          src: require("@/assets/img/work-01.png"),
+          src: require("@/assets/img/work-05.png"),
           flex: { cols: 12, sm: 6, md: 4 },
         },
         {
-          title: "Portfolio Page",
+          title: "Starbucks copy site",
           skill: "HTML/CSS,JavaScript",
           src: require("@/assets/img/work-01.png"),
           flex: { cols: 12, sm: 6, md: 4 },
@@ -169,6 +169,14 @@ export default {
           show: false,
         },
         {
+          title: "Git hub",
+          value: 0,
+          absoluteValue: 20,
+          color: "white",
+          icon: "mdi-github",
+          show: false,
+        },
+        {
           title: "Vue.js",
           value: 0,
           absoluteValue: 10,
@@ -182,6 +190,38 @@ export default {
           absoluteValue: 10,
           color: "white",
           icon: "mdi-language-python",
+          show: false,
+        },
+        {
+          title: "Chinese",
+          value: 0,
+          absoluteValue: 90,
+          color: "white",
+          icon: "mdi-panda",
+          show: false,
+        },
+        {
+          title: "Muscle training",
+          value: 0,
+          absoluteValue: 40,
+          color: "white",
+          icon: "mdi-weight-lifter",
+          show: false,
+        },
+        {
+          title: "You Tube",
+          value: 0,
+          absoluteValue: 100,
+          color: "white",
+          icon: "mdi-youtube",
+          show: false,
+        },
+        {
+          title: "E A T",
+          value: 0,
+          absoluteValue: 100,
+          color: "white",
+          icon: "mdi-silverware-clean",
           show: false,
         },
       ],

@@ -71,7 +71,7 @@
           </v-icon>
         </v-btn>
         <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
-          {{ new Date().getFullYear() }} — <strong>Wang.yu</strong>
+          {{ new Date().getFullYear() }} — <strong>（C)Wang.yu</strong>
         </v-col>
       </v-row>
     </v-footer>
@@ -82,7 +82,7 @@
 export default {
   data() {
     return {
-      drawer: null,
+      drawer: false,
       supports: [
         { name: "Discord", icon: "mdi-discord" },
         { name: "Github", icon: "mdi-github" },
