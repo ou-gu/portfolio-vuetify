@@ -1,32 +1,24 @@
 <template>
-  <v-carousel :show-arrows="false">
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel>
+  <div id="top">
+    <v-container
+      fluid
+    >
+      <v-card>
+        <v-img
+          height="800"
+          class="white--text align-end text-center font-italic"
+          :class="{'headline': $vuetify.breakpoint. smAndDown, 'display-1': $vuetify.breakpoint. mdAndUp}"
+          :src="require('@/assets/img/top-img.jpg')"
+        >
+        <p>Welocome to my Portfolio site</p>
+        <p>ようこそ Wang.yu のポートフォリオサイト</p>
+        </v-img >
+      </v-card>
+    </v-container>
+
+  </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
-  }
+
 </script>
